@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{45d41acc-2c3c-43d2-bc10-02aa73ffc7c7}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\binder.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\bytecode.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\code.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\container.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\environment.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\memory.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\parser.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\PSL.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\PSLlib.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\pstring.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\scope.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\tokenizer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\variable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\PSL\vdata.h" />
+  </ItemGroup>
+</Project>
