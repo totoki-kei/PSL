@@ -459,7 +459,7 @@ public:
 
 	bool toBool()		const {if (x.size() == 1)return x[0].get()->toBool();return x.size() != 0;}
 	int toInt()			const {if (x.size() == 1)return x[0].get()->toInt();return static_cast<int>(x.size());}
-	double toDouble()	const {if (x.size() == 1)return x[0].get()->toDouble();return x.size();}
+	double toDouble()	const {if (x.size() == 1)return x[0].get()->toDouble();return double(x.size());}
 	string toString()	const {if (x.size() == 1)return x[0].get()->toString();return "[tuple]";}
 	void *toPointer()	const {if (x.size() == 1)return x[0].get()->toPointer();return NULL;}
 
@@ -663,7 +663,7 @@ public:
 
 	bool toBool()		const {return !array.empty() || !member.empty() || code;}
 	int toInt()			const {return static_cast<int>(array.size());}
-	double toDouble()	const {return array.size();}
+	double toDouble()	const {return double(array.size());}
 	string toString()	const {return !array.empty() || !member.empty() ? "[Object]" : code ? "[function]" : "[null]";}
 	void *toPointer()	const {return array.empty() ? NULL : array[0].get()->toPointer();}
 

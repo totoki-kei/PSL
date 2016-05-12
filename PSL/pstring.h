@@ -558,11 +558,11 @@ public:
 			buf->setlen(0);
 		}
 	}
-	unsigned long hash() const
+	ptrdiff_t hash() const
 	{
 		if (!buf)
 			return 0;
-		unsigned long l = buf->length();
+		ptrdiff_t l = buf->length();
 		if (!l)
 			return 0;
 		unsigned long a = static_cast<unsigned long>(buf->at(0));

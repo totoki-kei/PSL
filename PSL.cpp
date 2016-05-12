@@ -1,5 +1,6 @@
-
+#define _CRT_SECURE_NO_WARNINGS
 #include "PSL/PSL.h"
+#undef _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 #ifdef _WIN32
@@ -52,7 +53,7 @@ int main(int argc, char **argv)
 
 	#ifdef _WIN32
 	printf("end - press any key\n");
-	getch();
+	_getch();
 	#endif
 	return 0;
 }

@@ -102,7 +102,7 @@ typedef std::map<string,rsv> table;
 #else
 class table
 {
-	typedef unsigned long hash;
+	typedef ptrdiff_t hash;
 	static hash gethash(const string &s, hash max)	{return s.hash() & (max-1);}
 	struct data
 	{

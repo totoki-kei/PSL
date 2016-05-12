@@ -1,6 +1,8 @@
 // 詐欺コンパイラ
 // インタプリタ(これ自身)の後ろにバイトコードを埋め込む
+#define _CRT_SECURE_NO_WARNINGS
 #include "PSL/PSL.h"
+#undef _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 #if _WIN32
@@ -82,7 +84,7 @@ int main(int argc, char **argv)
 			arg[i] = argv[i];
 		execute(exe, arg);
 #if _WIN32
-		getch();
+		_getch();
 #endif
 	}
 
